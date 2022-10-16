@@ -3,6 +3,7 @@ package steps;
 import java.awt.AWTException;
 
 import elementos.Elementos;
+import io.cucumber.java.After;
 import io.cucumber.java.it.Quando;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Entao;
@@ -15,6 +16,11 @@ public class CriarTarefaTeste {
 	Metodos metodos = new Metodos();
 	Elementos elemento = new Elementos();
 	MassaDados dados = new MassaDados();
+	
+	@After
+	public void finalizarTeste() {
+		Executa.fecharNavegador();
+	}
 
 	@Dado("que acesse o site martins bug tracker")
 	public void queAcesseOSiteMartinsBugTracker() {

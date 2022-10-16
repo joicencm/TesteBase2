@@ -29,5 +29,8 @@ public class Executa extends DriversFactory {
 		driver.manage().window().maximize();
 	}
 	
-
+	public static void fecharNavegador() {
+	driver.quit();
+	
+	}
 }
