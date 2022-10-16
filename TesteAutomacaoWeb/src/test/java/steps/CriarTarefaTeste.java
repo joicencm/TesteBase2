@@ -71,7 +71,7 @@ public class CriarTarefaTeste {
 	@Quando("clicar Criar Nova Tarefa")
 	public void clicarCriarNovaTarefa() {
 		metodos.clicar(elemento.getCriarNovaTarefa());
-		
+
 	}
 
 	@Entao("valido mensagem {string}")
@@ -79,16 +79,6 @@ public class CriarTarefaTeste {
 //		metodos.validarMensagem(elemento.getMsg(), string);
 //		metodos.aguardarElemento(300, elemento.getMsg());
 //		metodos.screenshot("CT01_TarefaCriada");
-
-	}
-
-	@Dado("que os campos obrigatorios esteja em branco")
-	public void queOsCamposObrigatoriosEstejaEmBranco() {
-		metodos.clicar(elemento.getCriarNovaTarefa());
-	}
-
-	@Entao("valido mensagem sem preenchimento {string}")
-	public void validoMensagemSemPreenchimento(String string) {
 
 	}
 

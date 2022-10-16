@@ -21,12 +21,9 @@ Funcionalidade: Criar tarefa
 
   @criarTarefa1
   Cenario: Criacao de tarefas
-	 	Entao valido mensagem "Operacao realizada com suces."
+	 	Entao valido mensagem "Operacao realizada com sucesso."
       
     
-    @criarTarefa2
-    Cenario: Campos em branco
-    Dado que os campos obrigatorios esteja em branco
-    Entao valido mensagem sem preenchimento "Preencha esse campo."
+  
     
 
