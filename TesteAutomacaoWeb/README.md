@@ -48,6 +48,6 @@ Frameworks:
 #### **Obs**
 - A pagina informando Operacao realizada com sucesso (fecha muito rapido). Não sendo possivel "AINDA", a validação da mensagem.
 
-- Não foi possivel "AINDA", a automacao criar tarefa sem o campo obrigatório em branco
+- Não foi possivel "AINDA", a automacao "criar tarefa" com o campo obrigatório em branco
 
 ##### Desenvolvido por Joice Martins
