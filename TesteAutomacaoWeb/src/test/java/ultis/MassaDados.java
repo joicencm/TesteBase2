@@ -16,6 +16,13 @@ public class MassaDados {
 		metodos.escrever(elemento.getDecricao(), "Realizando teste automatizado");
 	}
 	
+	public void login() {
+		metodos.escrever(elemento.getUsuario(), "joice.martins");
+		metodos.submit(elemento.getUsuario());
+		metodos.escrever(elemento.getSenha(), "Jo102030");
+		metodos.submit(elemento.getSenha());
+	}
+	
 	
 	
 

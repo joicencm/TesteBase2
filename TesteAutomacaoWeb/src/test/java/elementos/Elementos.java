@@ -16,7 +16,8 @@ public class Elementos {
 	private By enviarArquivo = By.xpath("//div[@class=\"dropzone center dz-clickable\"]");
 	private By viabilidadePrivado = By.xpath("//span[text()='privado']");
 	private By criarNovaTarefa = By.xpath("//input[@value=\"Criar Nova Tarefa\"]");
-	private By msg = By.xpath("//*[text()='Operacao realiza com sucesso.']");
+	private By msg = By.xpath("");
+	
 	
 	
 	public By getFrequencia() {

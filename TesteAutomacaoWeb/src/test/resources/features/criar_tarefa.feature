@@ -21,7 +21,7 @@ Funcionalidade: Criar tarefa
 
   @criarTarefa1
   Cenario: Criacao de tarefas
-	 	Entao valido mensagem "Operacao realizada com sucesso."
+	 	Entao valido mensagem "Operacao realizada com suces."
       
     
     @criarTarefa2

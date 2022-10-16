@@ -16,7 +16,7 @@ public class CriarTarefaTeste {
 	Metodos metodos = new Metodos();
 	Elementos elemento = new Elementos();
 	MassaDados dados = new MassaDados();
-	
+
 	@After
 	public void finalizarTeste() {
 		Executa.fecharNavegador();
@@ -30,10 +30,7 @@ public class CriarTarefaTeste {
 
 	@Dado("que realize o login")
 	public void queRealizeOLogin() {
-		metodos.escrever(elemento.getUsuario(), "joice.martins");
-		metodos.submit(elemento.getUsuario());
-		metodos.escrever(elemento.getSenha(), "Jo102030");
-		metodos.submit(elemento.getSenha());
+		dados.login();
 	}
 
 	@Dado("que esteja no menu Criar Tarefa")
@@ -74,21 +71,20 @@ public class CriarTarefaTeste {
 	@Quando("clicar Criar Nova Tarefa")
 	public void clicarCriarNovaTarefa() {
 		metodos.clicar(elemento.getCriarNovaTarefa());
-
+		
 	}
 
 	@Entao("valido mensagem {string}")
 	public void validoMensagem(String string) {
-		metodos.aguardarElemento(20, elemento.getMsg());
-		metodos.evidencia("CT01_TarefaCriada");
-		
-		
+//		metodos.validarMensagem(elemento.getMsg(), string);
+//		metodos.aguardarElemento(300, elemento.getMsg());
+//		metodos.screenshot("CT01_TarefaCriada");
 
 	}
 
 	@Dado("que os campos obrigatorios esteja em branco")
 	public void queOsCamposObrigatoriosEstejaEmBranco() {
-
+		metodos.clicar(elemento.getCriarNovaTarefa());
 	}
 
 	@Entao("valido mensagem sem preenchimento {string}")
