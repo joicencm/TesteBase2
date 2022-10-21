@@ -12,7 +12,7 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 @CucumberOptions(
 		features = "src/test/resources/features",
 		glue = "steps",
-		tags = "@login1",
+		tags = "@criarTarefa1",
 		monochrome = true,
 		dryRun = false,
 		plugin = {"pretty", "html:target/cucumber-report.html"},
