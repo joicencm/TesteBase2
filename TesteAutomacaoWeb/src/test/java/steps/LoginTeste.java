@@ -1,6 +1,7 @@
 package steps;
 
 import elementos.Elementos;
+import io.cucumber.java.After;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Entao;
 import io.cucumber.java.pt.Quando;
@@ -11,6 +12,12 @@ public class LoginTeste {
 
 	Metodos metodos = new Metodos();
 	Elementos elemento = new Elementos();
+	
+	@After
+	public void finalizarTeste() {
+		//Executa.fecharNavegador();
+	}
+	
 
 	@Dado("que acesse o site mantis bug tracker")
 	public void queAcesseOSiteMantisBugTracker() {
@@ -18,27 +25,32 @@ public class LoginTeste {
 
 	}
 
-	@Quando("informe a usuario")
-	public void informeAUsuario() {
+	@Quando("informe usuario")
+	public void informeUsuario() {
 		metodos.escrever(elemento.getUsuario(), "joice.martins");
 
 	}
 
-	@Dado("clicar para entrar com usuario")
-	public void clicarParaEntrarComUsuario() {
+	@Quando("clique em entrar com usuario")
+	public void cliqueEmEntrarComUsuario() {
 		metodos.submit(elemento.getUsuario());
 	}
 
-	@Dado("informe a senha")
-	public void informeASenha() {
+	@Quando("informe senha")
+	public void informeSenha() {
 		metodos.escrever(elemento.getSenha(), "Jo102030");
 
 	}
+	
+	@Quando("clique em entrar com a senha")
+	public void cliqueEmEntrarComASenha() {
+		metodos.submit(elemento.getSenha());
+	}
+		
 
 	@Entao("acesse as tarefas")
 	public void acesseAsTarefas() {
-		metodos.submit(elemento.getSenha());
-	
+		metodos.screenshot("CT01_Acesso_Minhas_Tarefas");
 
 	}
 	
@@ -57,3 +69,5 @@ public class LoginTeste {
 
 
 }
+
+

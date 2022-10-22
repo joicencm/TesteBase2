@@ -12,7 +12,7 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 @CucumberOptions(
 		features = "src/test/resources/features",
 		glue = "steps",
-		tags = "@criarTarefa1",
+		tags = "@login2",
 		monochrome = true,
 		dryRun = false,
 		plugin = {"pretty", "html:target/cucumber-report.html"},
@@ -30,7 +30,7 @@ public class Executa extends DriversFactory {
 	}
 	
 	public static void fecharNavegador() {
-	driver.quit();
+	//driver.quit();
 	
 	}
 }

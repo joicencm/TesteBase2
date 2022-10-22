@@ -6,6 +6,7 @@ public class Elementos {
 	
 	private By usuario = By.xpath("//input[@id=\"username\"]");
 	private By senha = By.xpath("//input[@id=\"password\"]");
+	private By acessoUsuario = By.xpath("//span[@class='user-info']");
 	private By criarTarefa = By.xpath("//span[text()=' Criar Tarefa ']");
 	private By selecionarProjeto = By.xpath("//input[@class=\"btn btn-primary btn-white btn-round\"]");
 	private By frequencia = By.xpath("//select[@id=\"reproducibility\"]//option[@value=\"10\"]");
@@ -18,6 +19,7 @@ public class Elementos {
 	private By criarNovaTarefa = By.xpath("//input[@value=\"Criar Nova Tarefa\"]");
 	private By msgLoginInvalido = By.xpath("//p[text()='Sua conta pode estar desativada ou bloqueada ou o nome de usuário e a senha que você digitou não estão corretos.']");
 	private By msg = By.xpath("");
+	
 	
 	
 	
@@ -75,6 +77,10 @@ public class Elementos {
 
 	public By getMsgLoginInvalido() {
 		return msgLoginInvalido;
+	}
+
+	public By getAcessoUsuario() {
+		return acessoUsuario;
 	}
 
 }

@@ -56,7 +56,7 @@ public class Metodos extends DriversFactory {
 	public void validarMensagem(By elemento, String texto) {
 		String textoCapturado = driver.findElement(elemento).getText();
 		System.out.println("Mensagem Capturado" + textoCapturado);
-		assertTrue(textoCapturado.equals(textoCapturado));
+		assertTrue(textoCapturado.contains(texto));
 	}
 
 	public void screenshot(String nomeEvidencia) {

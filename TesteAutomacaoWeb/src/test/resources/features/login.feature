@@ -12,12 +12,14 @@ Funcionalidade: Login de acesso
   @login1
   Cenario: Login valido
     Quando informe usuario
+    E clique em entrar com usuario
     E informe senha
+    E clique em entrar com a senha
     Entao acesse as tarefas
 
   @login2
   Cenario: Login em branco
     Quando avancar sem o usuario
-    Entao informe valide mensagem "Sua conta pode estar desativada ou bloqueada ou o nome de usuário e a senha que você digitou não estão corretos."
+    Entao informe valide mensagem "Sua conta pode estar desativada ou bloqueada ou o nome de usuario e a senha que voce digitou nao estao corretos."
     
   
