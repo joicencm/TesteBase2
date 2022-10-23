@@ -53,11 +53,12 @@ public class Metodos extends DriversFactory {
 		robot.delay(1000);
 	}
 
-	public void validarMensagem(By elemento, String texto) {
+	public void validarMensagem(By elemento, String textoEsperado) {
 		String textoCapturado = driver.findElement(elemento).getText();
-		System.out.println("Mensagem Capturado" + textoCapturado);
-		assertTrue(textoCapturado.contains(texto));
-	}
+		System.out.println("Mensagem Capturada: " + textoCapturado);
+		assertTrue(textoCapturado.equals(textoEsperado));
+	}		
+
 
 	public void screenshot(String nomeEvidencia) {
 		TakesScreenshot scrShot = (TakesScreenshot) driver;

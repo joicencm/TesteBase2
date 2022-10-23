@@ -70,7 +70,7 @@ public class CriarTarefaTeste {
 
 	@Quando("clicar Criar Nova Tarefa")
 	public void clicarCriarNovaTarefa() {
-		metodos.clicar(elemento.getCriarNovaTarefa());
+//		metodos.clicar(elemento.getCriarNovaTarefa());
 
 	}
 

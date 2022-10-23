@@ -20,6 +20,6 @@ Funcionalidade: Login de acesso
   @login2
   Cenario: Login em branco
     Quando avancar sem o usuario
-    Entao informe valide mensagem "Sua conta pode estar desativada ou bloqueada ou o nome de usuario e a senha que voce digitou nao estao corretos."
+    Entao informe valide mensagem
     
   

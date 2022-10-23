@@ -17,6 +17,7 @@ public class Elementos {
 	private By enviarArquivo = By.xpath("//div[@class=\"dropzone center dz-clickable\"]");
 	private By viabilidadePrivado = By.xpath("//span[text()='privado']");
 	private By criarNovaTarefa = By.xpath("//input[@value=\"Criar Nova Tarefa\"]");
+	private By alert = By.xpath("//div[@class='alert alert-danger']");
 	private By msgLoginInvalido = By.xpath("//p[text()='Sua conta pode estar desativada ou bloqueada ou o nome de usuário e a senha que você digitou não estão corretos.']");
 	private By msg = By.xpath("");
 	
@@ -81,6 +82,10 @@ public class Elementos {
 
 	public By getAcessoUsuario() {
 		return acessoUsuario;
+	}
+
+	public By getAlert() {
+		return alert;
 	}
 
 }

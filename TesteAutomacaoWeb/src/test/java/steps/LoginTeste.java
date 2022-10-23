@@ -12,12 +12,11 @@ public class LoginTeste {
 
 	Metodos metodos = new Metodos();
 	Elementos elemento = new Elementos();
-	
+
 	@After
 	public void finalizarTeste() {
-		//Executa.fecharNavegador();
+		 Executa.fecharNavegador();
 	}
-	
 
 	@Dado("que acesse o site mantis bug tracker")
 	public void queAcesseOSiteMantisBugTracker() {
@@ -41,33 +40,27 @@ public class LoginTeste {
 		metodos.escrever(elemento.getSenha(), "Jo102030");
 
 	}
-	
+
 	@Quando("clique em entrar com a senha")
 	public void cliqueEmEntrarComASenha() {
 		metodos.submit(elemento.getSenha());
 	}
-		
 
 	@Entao("acesse as tarefas")
 	public void acesseAsTarefas() {
 		metodos.screenshot("CT01_Acesso_Minhas_Tarefas");
 
 	}
-	
-	
+
 	@Quando("avancar sem o usuario")
 	public void avancarSemOUsuario() {
-	    metodos.submit(elemento.getUsuario());
-	}
-	@Entao("informe valide mensagem {string}")
-	public void informeValideMensagem(String string) {
-		metodos.validarMensagem(elemento.getMsgLoginInvalido(), string);
-	   
+		metodos.submit(elemento.getUsuario());
 	}
 
+	@Entao("informe valide mensagem")
+	public void informeValideMensagem() {
+		metodos.validarMensagem(elemento.getMsgLoginInvalido(), "Sua conta pode estar desativada ou bloqueada ou o nome de usuário e a senha que você digitou não estão corretos.");
 
-
+	}
 
 }
-
-
